@@ -1,13 +1,22 @@
 {
   "name": "tradebull-server",
   "version": "1.0.0",
-  "description": "TradeBull backend server",
+  "description": "Backend server for TradeBull stock trading platform",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js",             
+    "dev": "nodemon server.js"             
   },
+  "keywords": [
+    "backend",
+    "express",
+    "api",
+    "stock",
+    "tradebull"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.6.0",
     "cors": "^2.8.5",
