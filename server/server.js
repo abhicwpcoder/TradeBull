@@ -3,6 +3,9 @@ import cors from 'cors';
 import stockRoutes from './routes/stock.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 const PORT = process.env.PORT || 5000;
