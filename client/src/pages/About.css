@@ -1,0 +1,302 @@
+.about {
+  padding: 2rem 0;
+}
+
+.about-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #f0f0f0;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #ede9f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
+  padding: 3rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInDown 0.8s;
+}
+
+.about-card h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+.about-card p {
+  color: #5f5f7a;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Universal Responsive & Attractive Styles --- */
+@media (max-width: 1024px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.2rem !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 1.5rem 0 1rem 0 !important;
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 0.5rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.5rem !important;
+    padding: 1rem 0 0.7rem 0 !important;
+  }
+  .result-header p,
+  .hero-section p,
+  .about-header p,
+  .contact-header p {
+    font-size: 1rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 1rem 0.7rem !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .card-header h3 {
+    font-size: 1.1rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.95rem !important;
+    padding: 0.2rem 0.7rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    padding: 1rem 0.5rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.7rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 0.7rem 0 !important;
+    border-radius: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.1rem !important;
+    padding: 0.7rem 0 0.7rem 0 !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 0.7rem 0 0.7rem 0 !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 0.7rem 0.3rem !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .card-header h3 {
+    font-size: 0.95rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.85rem !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 99vw !important;
+    min-width: 0 !important;
+    padding: 0.7rem 0.3rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.5rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 0 !important;
+    border-radius: 1.2rem !important;
+  }
+}
+
+/* Extra: Make sure html/body don't overflow horizontally */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Extra: Add a little touch for cards on mobile */
+.result-card,
+.feature-card,
+.about-card,
+.contact-card,
+.login-card,
+.signup-card {
+  box-shadow: 0 2px 12px rgba(100, 115, 201, 0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.result-card:active,
+.feature-card:active,
+.about-card:active,
+.contact-card:active,
+.login-card:active,
+.signup-card:active {
+  box-shadow: 0 4px 18px rgba(100, 115, 201, 0.18);
+  transform: scale(0.98);
+}

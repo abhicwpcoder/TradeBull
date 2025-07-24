@@ -1,0 +1,403 @@
+.gradient-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa 0%, #e3f2fd 100%);
+  padding-bottom: 3rem;
+}
+
+.result {
+  padding: 2rem 0;
+}
+
+.result-header {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.result-header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00838f 0%, #1976d2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  animation: fadeInDown 0.7s;
+}
+
+.result-header p {
+  color: #1976d2;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.9s;
+}
+
+.no-data {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(25,118,210,0.10);
+  max-width: 600px;
+  margin: 4rem auto;
+  animation: fadeInDown 0.7s;
+}
+
+.no-data h1 {
+  font-size: 2.5rem;
+  color: #00838f;
+  margin-bottom: 1rem;
+}
+
+.no-data p {
+  color: #1976d2;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.futures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.future-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00838f;
+  margin: 0;
+}
+
+.card-header .symbol {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-content > div:last-child {
+  border-bottom: none;
+}
+
+.card-content .label {
+  color: #00838f;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.card-content .value {
+  color: #263238;
+  font-weight: 600;
+}
+
+.value.positive {
+  color: #27ae60;
+}
+
+.value.negative {
+  color: #e74c3c;
+}
+
+.price-info .value {
+  font-size: 1.2rem;
+  color: #667eea;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.result-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,131,143,0.10), 0 1.5px 6px rgba(25,118,210,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s, border 0.2s;
+  cursor: pointer;
+  border: 2px solid #b2ebf2;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.7s forwards;
+}
+
+.result-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,131,143,0.18), 0 2px 8px rgba(25,118,210,0.12);
+  border-color: #1976d2;
+  background: #e0f2f1;
+}
+
+.animated-card {
+  animation: fadeInUp 0.7s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.more-info-btn {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(90deg, #1976d2 0%, #00838f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  outline: none;
+  margin-top: 1rem;
+}
+
+.more-info-btn:hover {
+  background: linear-gradient(90deg, #00838f 0%, #1976d2 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(25,118,210,0.18);
+}
+
+.search-btn {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(90deg, #1976d2 0%, #00838f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  outline: none;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #00838f 0%, #1976d2 100%);
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(25,118,210,0.14);
+}
+
+/* --- Universal Responsive & Attractive Styles --- */
+@media (max-width: 1024px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.2rem !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 1.5rem 0 1rem 0 !important;
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 0.5rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.5rem !important;
+    padding: 1rem 0 0.7rem 0 !important;
+  }
+  .result-header p,
+  .hero-section p,
+  .about-header p,
+  .contact-header p {
+    font-size: 1rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 1rem 0.7rem !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .card-header h3 {
+    font-size: 1.1rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.95rem !important;
+    padding: 0.2rem 0.7rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    padding: 1rem 0.5rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.7rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 0.7rem 0 !important;
+    border-radius: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.1rem !important;
+    padding: 0.7rem 0 0.7rem 0 !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 0.7rem 0 0.7rem 0 !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 0.7rem 0.3rem !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .card-header h3 {
+    font-size: 0.95rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.85rem !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 99vw !important;
+    min-width: 0 !important;
+    padding: 0.7rem 0.3rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.5rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 0 !important;
+    border-radius: 1.2rem !important;
+  }
+}
+
+/* Extra: Make sure html/body don't overflow horizontally */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Extra: Add a little touch for cards on mobile */
+.result-card,
+.feature-card,
+.about-card,
+.contact-card,
+.login-card,
+.signup-card {
+  box-shadow: 0 2px 12px rgba(100, 115, 201, 0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.result-card:active,
+.feature-card:active,
+.about-card:active,
+.contact-card:active,
+.login-card:active,
+.signup-card:active {
+  box-shadow: 0 4px 18px rgba(100, 115, 201, 0.18);
+  transform: scale(0.98);
+}

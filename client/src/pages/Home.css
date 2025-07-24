@@ -1,0 +1,308 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f8f7fc;
+  border-radius: 24px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.10);
+  animation: fadeInDown 0.8s;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  color: #5f5f7a;
+  margin-bottom: 2rem;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.search-form {
+  display: flex;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(102, 126, 234, 0.06);
+  padding: 0.25rem 0.5rem;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem 0 0 2rem;
+  background: transparent;
+}
+
+.search-btn {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.10);
+  outline: none;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #647dee 0%, #7f53ac 100%);
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.14);
+}
+
+.features-section {
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: #4b3869;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: #f8f7fc;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0f7;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  border-color: #a084e8;
+  background: #ede9f7;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #7f53ac;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #5f5f7a;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* --- Universal Responsive & Attractive Styles --- */
+@media (max-width: 1024px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.2rem !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 1.5rem 0 1rem 0 !important;
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .results-grid,
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 0.5rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.5rem !important;
+    padding: 1rem 0 0.7rem 0 !important;
+  }
+  .result-header p,
+  .hero-section p,
+  .about-header p,
+  .contact-header p {
+    font-size: 1rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 1rem 0.7rem !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .card-header h3 {
+    font-size: 1.1rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.95rem !important;
+    padding: 0.2rem 0.7rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    padding: 1rem 0.5rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.7rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 0.7rem 0 !important;
+    border-radius: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container, .results-grid, .features-grid {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+  .result-header h1,
+  .hero-section h1,
+  .about-header h1,
+  .contact-header h1 {
+    font-size: 1.1rem !important;
+    padding: 0.7rem 0 0.7rem 0 !important;
+  }
+  .result-header,
+  .hero-section,
+  .about-header,
+  .contact-header {
+    padding: 0.7rem 0 0.7rem 0 !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .result-card,
+  .feature-card,
+  .about-card,
+  .contact-card,
+  .login-card,
+  .signup-card {
+    padding: 0.7rem 0.3rem !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .card-header h3 {
+    font-size: 0.95rem !important;
+  }
+  .card-header .symbol {
+    font-size: 0.85rem !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+  .auth-card,
+  .login-card,
+  .signup-card {
+    max-width: 99vw !important;
+    min-width: 0 !important;
+    padding: 0.7rem 0.3rem !important;
+  }
+  .auth-form,
+  .login-form,
+  .signup-form {
+    gap: 0.5rem !important;
+  }
+  .auth-btn,
+  .login-btn,
+  .signup-btn,
+  .search-btn,
+  .more-info-btn {
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 0 !important;
+    border-radius: 1.2rem !important;
+  }
+}
+
+/* Extra: Make sure html/body don't overflow horizontally */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Extra: Add a little touch for cards on mobile */
+.result-card,
+.feature-card,
+.about-card,
+.contact-card,
+.login-card,
+.signup-card {
+  box-shadow: 0 2px 12px rgba(100, 115, 201, 0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.result-card:active,
+.feature-card:active,
+.about-card:active,
+.contact-card:active,
+.login-card:active,
+.signup-card:active {
+  box-shadow: 0 4px 18px rgba(100, 115, 201, 0.18);
+  transform: scale(0.98);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
