@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Setup __dirname for ES module
 const __filename = fileURLToPath(import.meta.url);
