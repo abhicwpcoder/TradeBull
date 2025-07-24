@@ -5,12 +5,12 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Load environment variables from .env file
+dotenv.config(); // Load .env file
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Setup __dirname for ES module
+// __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -22,16 +22,16 @@ app.use(express.urlencoded({ extended: true }));
 // API Routes
 app.use('/api', stockRoutes);
 
-// ✅ Serve static files from React build (correct path)
+// Serve static React files
 const clientBuildPath = path.resolve(__dirname, '../client/build');
 app.use(express.static(clientBuildPath));
 
-// ✅ Fallback for SPA (React router)
+// Handle all other routes (React SPA fallback)
 app.get('*', (req, res) => {
   res.sendFile(path.join(clientBuildPath, 'index.html'));
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+// Start the server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Server is running and listening on port ${PORT}`);
 });
