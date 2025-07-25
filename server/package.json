@@ -21,7 +21,8 @@
     "axios": "^1.6.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "tradebull": "file:.."
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

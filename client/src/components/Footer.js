@@ -18,8 +18,8 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h4>Contact Info</h4>
-            <p>Email: info@tradebull.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <p>Email: abhijeetdepale9@gmail.com</p>
+            <p>Phone: +91 7767951802</p>
           </div>
           <div className="footer-section">
             <h4>Quick Links</h4>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {currentYear} TradeBull. All rights reserved. Developed by Your Name</p>
+          <p>&copy; {currentYear} TradeBull. All rights reserved. Developed by Abhijeet Depale</p>
         </div>
       </div>
     </footer>

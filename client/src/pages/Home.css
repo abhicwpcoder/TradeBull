@@ -12,7 +12,8 @@
   padding: 4rem 2rem;
   background: #f8f7fc;
   border-radius: 24px;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
   box-shadow: 0 8px 32px rgba(102, 126, 234, 0.10);
   animation: fadeInDown 0.8s;
 }
@@ -80,6 +81,7 @@
 
 .features-section {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .features-section h2 {

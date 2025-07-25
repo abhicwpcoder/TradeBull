@@ -63,7 +63,7 @@ const Home = () => {
                   type="text"
                   value={stockName}
                   onChange={(e) => setStockName(e.target.value)}
-                  placeholder="Enter stock symbol (e.g., AAPL, GOOGL, TSLA)"
+                  placeholder="Enter Stock Name"
                   className="search-input"
                 />
                 <button 
