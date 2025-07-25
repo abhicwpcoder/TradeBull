@@ -122,3 +122,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For any questions or support, please contact us through the Contact page or email info@tradebull.com.
 hello
+
+command for push:-git push origin main --force
