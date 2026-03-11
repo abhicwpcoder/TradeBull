@@ -4,12 +4,12 @@ import axios from 'axios';
 const router = express.Router();
 
 // API key
-const apiKey = 'cadbd62787b63a15437ed1bcb5f681c7f3faf28d6f0fd6dcd23e32c6245d0cf3';
-
+const apiKey = '241c5889413cb0c2a4bae3309c30eb23038b8d9c7eb947dcf458a2d0bfaf1f77';
 // POST route to fetch stock data
 router.post('/stock', async (req, res) => {
   try {
     const { stockName } = req.body;
+    console.log('Received stock name:', stockName); // Log the received stock name for debugging
     
     if (!stockName) {
       return res.status(400).json({ error: 'Stock name is required' });
@@ -18,18 +18,18 @@ router.post('/stock', async (req, res) => {
     const url = `https://serpapi.com/search?engine=google_finance&q=${stockName}&api_key=${apiKey}`;
     
     const response = await axios.get(url);
-    
-    // Check if futures_chain exists in the response
-    if (response.data && response.data.futures_chain) {
+    console.log('API Response:', response); // Log the entire response for debugging
+    // Check if suggestions exists in the response
+    if (response.data && response.data.suggestions) {
       res.json({
         success: true,
-        data: response.data.futures_chain,
+        data: response.data.suggestions,
         stockName: stockName
       });
     } else {
       res.json({
         success: false,
-        message: 'No futures data found for this stock',
+        message: 'No suggestions found for this stock',
         data: []
       });
     }
